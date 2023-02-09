@@ -32,8 +32,11 @@ margin: 20px 0 0 0;
    list-style: none;
 }
 
+.Weather .cleafix{
+   display: flex;
+   align-items: center; /* img and temp. in one row */
 
-
+}
 .Weather img{
 height: 64px;
 width: 64px;
@@ -43,11 +46,9 @@ margin-right: 10px;
 
 .Weather .temperature{
    font-size: 64px;
-   line-height: 64px;
+   line-height: 1;
    font-weight: 400;
-
    color: rgb(33, 33, 33);
-
 }
 
 .Weather .unit{
@@ -56,6 +57,6 @@ font-size: 16px;
 font-weight: 400;
 position: relative;
 line-height: 1;
-top: -34px;
+top: -18px;
 margin-left: 5px;
 }
