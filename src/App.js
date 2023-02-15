@@ -12,7 +12,7 @@ export default function App() {
       <a href="https://github.com/SPalii/react-weather-app/blob/main/my-app/src/App.js" target="blank">open-soucred on GitHub</a>
       and{" "}
           <a
-            href=""
+            href="https://moonlit-salmiakki-3d44be.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
