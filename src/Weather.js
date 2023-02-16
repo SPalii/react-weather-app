@@ -9,9 +9,10 @@ export default function Weather(props) {
    const [city, setCity] = useState(props.defaultCity);
 
 function handleResponse(response){
-//console.log(response.data);
+console.log(response.data);
 setWeatherData({
    ready:true,
+   coordinates: response.data.coord,   //use for weatherForecast
    temperature:response.data.main.temp,
    humidity:response.data.main.humidity,
    date:new Date(response.data.dt * 1000),
@@ -35,7 +36,8 @@ function handleCityChange(event){
 function search(){
    const apiKey="1ef7d7e2ff03d274cb2d1bf82cc249b8";
    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+
+   axios.get(apiUrl).then(handleResponse);
 }
 
 if(weatherData.ready){
@@ -58,7 +60,7 @@ if(weatherData.ready){
 </form>
 
 <WeatherInfo data={weatherData} />
-<WeatherForecast />
+<WeatherForecast coordinates={weatherData.coordinates} />
         </div>// div Weather
 );
 }
