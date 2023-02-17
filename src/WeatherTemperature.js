@@ -14,7 +14,7 @@ setUnit("celsius");
 }
 function fahrenheit(){
 return(
-      (props.celsius * 9/5)+32);
+      (props.celsius * 9) /5+32);
 }
 if (unit === "celsius"){
 
