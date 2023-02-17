@@ -21,9 +21,13 @@ if (loaded) {
       <div className="WeatherForecast">
         <div className="row">
           <div className="col">
-            Sun
-            10  8
-            {/* <WeatherForecastDay data={forecast[0]} /> */}
+            <div className="WeatherForecast-day">Sun</div>
+            <WeatherIcon  code= "01d" />
+
+            <div className="WeatherForecast-temperature">
+              <span className="WeatherForecast-temperature-max">15 </span>
+              <span className="WeatherForecast-temperature-min">10 </span>
+            </div>
           </div>
         </div>
       </div>
