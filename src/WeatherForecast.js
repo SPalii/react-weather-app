@@ -44,9 +44,3 @@ else{
 }
 }
 
-// https://api.openweathermap.org/data/2.5/onecall?lat=50.44&lon=30.52&appid=55f59614e2025a21009b8c49463db5d3
-
-// let apiKey ="85dbd95fc1afc65ff87ff855b27d372f";
-// let longitude = props.coordinates.lon;
-// let latitude = props.coordinates.lat;
-// let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
