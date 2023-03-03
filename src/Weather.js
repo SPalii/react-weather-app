@@ -6,10 +6,10 @@ import "./Weather.css";
 
 export default function Weather(props) {
    const[weatherData, setWeatherData] = useState({ready: false});
-   const[city, setCity] = useState(props.defaultCity);
+   const [city, setCity] = useState(props.defaultCity);
 
 function handleResponse(response){
-// console.log(response.data);
+
 
 setWeatherData({
    ready: true,
@@ -37,11 +37,12 @@ function handleCityChange(event){
 function search(){
    const apiKey="85dbd95fc1afc65ff87ff855b27d372f";
    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
    axios.get(apiUrl).then(handleResponse);
 }
 
 if(weatherData.ready){
-   return (
+   return(
    <div className="Weather">
 
    <form onSubmit={handleSubmit}>
@@ -58,11 +59,10 @@ if(weatherData.ready){
          <div className="col-3">
             <input type="submit" value="Search" className="btn btn-primary w-100" />
          </div>
-      </div>
+    </div>
    </form>
 
 <WeatherInfo data={weatherData} />
-
 <WeatherForecast coordinates={weatherData.coordinates} />
    </div>  // div Weather
 );
@@ -73,5 +73,5 @@ else{
       "Loading..."
     )
 }
-
 }
+
