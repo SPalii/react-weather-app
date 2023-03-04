@@ -11,7 +11,7 @@ export default function App() {
       <Weather defaultCity="Kyiv" />
 
       <footer>This project was coded by Svitlana Palii {" "}
-      <a href="https://github.com/SPalii/react-weather-app/blob/main/my-app/src/App.js" target="blank">open-soucred on GitHub</a>
+      <a href="https://github.com/SPalii/react-weather-app/tree/main/src" target="blank">open-soucred on GitHub</a>
       and{" "}
           <a
             href="https://moonlit-salmiakki-3d44be.netlify.app"

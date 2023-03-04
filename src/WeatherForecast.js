@@ -7,7 +7,7 @@ export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
 // if the coordinates change
-// set loaded false не потрібно звгружати div WeatherForecast, а зразу api
+// set loaded false; не потрібно звгружати div WeatherForecast, а зразу api
 
 useEffect(() => {
 setLoaded(false);
@@ -20,7 +20,6 @@ function handleResponse(response) {
   }
 
 if(loaded){
-
   //console.log(forecast);
 
 return (
@@ -29,8 +28,8 @@ return (
 
   {forecast.map(function (dailyForecast, index){
     if (index < 5){
-return(
-<div className="col" key={index}>
+  return(
+    <div className="col" key={index}>
           <WeatherForecastDay data={dailyForecast} />
         </div>
       );
