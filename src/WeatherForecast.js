@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./WeatherForecast.css";
 import WeatherForecastDay from "./WeatherForecastDay";
 import axios from "axios";
@@ -14,7 +14,7 @@ setLoaded(false);
 }, [props.coordinates]
 );
 
-function handleResponse(response) {
+function handleResponse(response){
      setForecast(response.data.daily);
     setLoaded(true);
   }
@@ -42,7 +42,7 @@ return (
 }
 else{
 
-  let apiKey ="2a2eaa51d996796495bf456e5b58adf4";
+  let apiKey ="55f59614e2025a21009b8c49463db5d3";
   // let apiKey = "55f59614e2025a21009b8c49463db5d3";
   let longitude = props.coordinates.lon;
   let latitude = props.coordinates.lat;
