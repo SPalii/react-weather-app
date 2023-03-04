@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./WeatherForecast.css";
 import WeatherForecastDay from "./WeatherForecastDay";
 import axios from "axios";
@@ -6,11 +6,17 @@ import axios from "axios";
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
+// if the coordinates change
+// set loaded false не потрібно звгружати div WeatherForecast
 
-  function handleResponse(response) {
-    alert("Sveta")
-  setForecast(response.data.daily);
-  setLoaded(true);
+useEffect(() => {
+setLoaded(false);
+}, [props.coordinates]
+);
+
+function handleResponse(response) {
+     setForecast(response.data.daily);
+    setLoaded(true);
   }
 
 if(loaded){
