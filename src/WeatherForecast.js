@@ -8,12 +8,15 @@ export default function WeatherForecast(props) {
   let [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
+    alert("Sveta")
   setForecast(response.data.daily);
   setLoaded(true);
   }
 
 if(loaded){
+
   //console.log(forecast);
+
 return (
     <div className="WeatherForecast">
       <div className="row">
@@ -28,12 +31,12 @@ return(
     }
     })
     }
-
     </div>
     </div>
   );
 }
 else{
+
   let apiKey ="2a2eaa51d996796495bf456e5b58adf4";
   // let apiKey = "55f59614e2025a21009b8c49463db5d3";
   let longitude = props.coordinates.lon;
